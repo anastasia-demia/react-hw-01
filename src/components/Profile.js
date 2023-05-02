@@ -7,6 +7,8 @@ const Profile = ({
     <img
       src={avatar}
       alt="User avatar"
+      width={100}
+      height={100}
       class="avatar"
     />
     <p class="name">{username}</p>
@@ -15,16 +17,16 @@ const Profile = ({
   </div>
 
   <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
+    <li class="profile-item">
+      <span class="profile-label">Followers</span>
       <span class="quantity">{stats.followers}</span>
     </li>
-    <li>
-      <span class="label">Views</span>
+    <li class="profile-item">
+      <span class="profile-label">Views</span>
       <span class="quantity">{stats.views}</span>
     </li>
-    <li>
-      <span class="label">Likes</span>
+    <li class="profile-item">
+      <span class="profile-label">Likes</span>
       <span class="quantity">{stats.likes}</span>
     </li>
   </ul>
