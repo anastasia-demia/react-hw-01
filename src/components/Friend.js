@@ -3,14 +3,15 @@ const Friend = ({
   }) => {
     return (
     <li class="friend-item">     
-      <span class="status"></span>         
+      <span 
+      class="status"
+      style={{ backgroundColor: isOnline ? 'green' : 'red' }}
+      ></span>         
       <img class="friend-avatar" src={avatar} alt="User avatar" width="48" />
       <p class="friend-name">{name}</p>
     </li>
   )
 }
-
-// {isOnline ? status.online : status.offline}
 
 export default function Friends ({ friends }) {
   return (
