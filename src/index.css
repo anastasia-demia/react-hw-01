@@ -52,7 +52,7 @@ p {
   flex-direction: column;
   align-items: center;
 
-  color: #000000;
+  color: black;
 }
 .avatar {
   border: 3px solid #e9eef3;
@@ -131,7 +131,7 @@ justify-content: center;
   width: 60px;
   padding: 20px;
 
-  color: #fff;
+  color: white;
   background-color: #ccc;
 }
 
@@ -195,8 +195,8 @@ justify-content: center;
 }
 
 thead {
-  background-color: #2a99f3;
-  color: #ffffff;
+  background-color: rgb(58, 58, 215);
+  color: white;
 }
 
 tr {
@@ -205,5 +205,5 @@ tr {
 }
 
 tr:nth-child(2n) {
-  background-color: #f1f1f1;
+  background-color: rgb(233, 232, 232);
 }
