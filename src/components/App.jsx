@@ -1,6 +1,6 @@
 import Profile from "./Profile";
 import Stats from "./Statistics";
-import Friend from "./Friend";
+import Friends from "./Friend";
 import user from "./data/user.json";
 import data from "./data/data.json"
 import friends from "./data/friends.json";
@@ -21,11 +21,12 @@ export const App = () => {
         stats={data}
       />
 
-      <Friend
-        avatar= {friends.avatar} 
-        name= {friends.name}
-        isOnline= {friends.isOnline}
-        id= {friends.id}
+      <Stats
+        stats={data}
+      />
+
+      <Friends
+        friends= {friends}
       />
     </div>
   );

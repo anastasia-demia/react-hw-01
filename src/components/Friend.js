@@ -1,16 +1,28 @@
 const Friend = ({
-    avatar, name, isOnline, id
+    avatar, name, isOnline
   }) => {
     return (
-      <ul className="friend-list">
-        <li
-          className="friend-item"
-          key={id}>     
-          <span class="status">{isOnline}</span>         
-          <img class="friend-avatar" src={avatar} alt="User avatar" width="48" />
-          <p class="friend-name">{name}</p>
-        </li>
-      </ul>
-    )}
+    <li class="friend-item">     
+      <span class="status"></span>         
+      <img class="friend-avatar" src={avatar} alt="User avatar" width="48" />
+      <p class="friend-name">{name}</p>
+    </li>
+  )
+}
 
-export default Friend;
+// {isOnline ? status.online : status.offline}
+
+export default function Friends ({ friends }) {
+  return (
+    <ul class="friend-list">
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <Friend
+          key={id}
+          isOnline={isOnline}
+          avatar={avatar}
+          name={name}
+        />
+      ))}
+    </ul>
+  );
+}

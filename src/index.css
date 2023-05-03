@@ -144,3 +144,55 @@ justify-content: center;
   margin-top: 50px;
   margin-left: 30px;
 }
+
+.friend-list{
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  width: 250px;
+
+  margin-bottom: 15px;
+  border: 1px solid #e9eef3;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.friend-item:last-child {
+  margin-bottom: 0;
+}
+
+.status {
+  display: block;
+  margin-left: 15px;
+
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+
+  border-radius: 50%;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: tomato;
+}
+
+.friend-avatar {
+  padding: 25px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+
+}
+
+.friend-name {
+  font-size: 20px;
+  font-weight: 700;
+}
