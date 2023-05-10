@@ -7,11 +7,11 @@
 justify-content: center;
 }
 
-.stat-list {
+.list {
   display: flex;
 }
 
-.stat-item {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
