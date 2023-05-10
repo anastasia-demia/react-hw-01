@@ -1,14 +1,5 @@
-const Transaction = ({
-  type, amount, currency
-}) => {
-  return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-  )
-}
+import PropTypes from 'prop-types';
+import Transaction from "./Transactions";
 
 const TransactionHistory = ({
   items
@@ -18,7 +9,7 @@ const TransactionHistory = ({
       <thead>
         <tr>
           <th>Type</th>
-          <th>Amount</th>
+          <th>amount</th>
           <th>Currency</th>
         </tr>
       </thead>
@@ -35,6 +26,13 @@ const TransactionHistory = ({
       </tbody>
     </table>
   )
+}
+
+TransactionHistory.PropTypes = {
+  id: PropTypes.number,
+  type: PropTypes.string,
+  amount: PropTypes.string,
+  currency: PropTypes.string,
 }
 
 export default TransactionHistory;
