@@ -1,9 +1,9 @@
-.friend-list{
+.list{
   margin-top: 50px;
   margin-left: 100px;
 }
 
-.friend-item {
+.item {
   display: flex;
   align-items: center;
   width: 250px;
@@ -14,7 +14,7 @@
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
-.friend-item:last-child {
+.item:last-child {
   margin-bottom: 0;
 }
 
@@ -29,7 +29,7 @@
   border-radius: 50%;
 }
 
-.friend-avatar {
+.avatar {
   padding: 25px;
   margin-right: 20px;
   border: 1px solid #ccc;
@@ -37,7 +37,7 @@
 
 }
 
-.friend-name {
+.name {
   font-size: 20px;
   font-weight: 700;
 }
