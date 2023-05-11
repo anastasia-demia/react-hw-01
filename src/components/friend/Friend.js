@@ -1,4 +1,5 @@
-import css from "./friend.module.css"
+import PropTypes from 'prop-types';
+import css from "./friend.module.css";
 
 const Friend = ({
     avatar, name, isOnline
@@ -13,6 +14,12 @@ const Friend = ({
       <p className={css.name}>{name}</p>
     </li>
   )
-}
+};
+
+Friend.protoTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
 
 export default Friend;
