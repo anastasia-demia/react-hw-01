@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import css from "./stats.module.css"
+import css from "./stats.module.css";
 
 function randomHexColor() {
   return `#${Math.floor(Math.random() * 12345678).toString(16)}`;
-}
+};
 
 const Stats = ({
   title, stats
 }) => {
   return (
-    <div class={css.box}>
+    <div className={css.box}>
     {title && <section className={css.statistics}>
-      <h2 class={css.title}>{title}</h2>
+      <h2 className={css.title}>{title}</h2>
 
       <ul className={css.list}>
         {stats.map(({ id, label, percentage }) => {
@@ -29,13 +29,18 @@ const Stats = ({
       </ul>
     </section>}
     </div>
-  )}
+  )
+};
 
   Stats.propTypes = {
     title: PropTypes.string,
-    id: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+      }).isRequired
+    ).isRequired,
+  };
 
   export default Stats;

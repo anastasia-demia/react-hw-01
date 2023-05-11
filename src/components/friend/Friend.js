@@ -4,13 +4,13 @@ const Friend = ({
     avatar, name, isOnline
   }) => {
     return (
-    <li class={css.item}>
+    <li className={css.item}>
       <span
-      class={css.status}
+      className={css.status}
       style={{ backgroundColor: isOnline ? 'green' : 'red' }}
       ></span>
-      <img class={css.avatar} src={avatar} alt="User avatar" width="48" />
-      <p class={css.name}>{name}</p>
+      <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={css.name}>{name}</p>
     </li>
   )
 }

@@ -5,32 +5,32 @@ const Profile = ({
   username, tag, location, avatar, stats
 }) => {
   return (
-  <div class={css.profile}>
-  <div class={css.description}>
+  <div className={css.profile}>
+  <div className={css.description}>
     <img
       src={avatar}
       alt="User avatar"
       width={100}
       height={100}
-      class={css.avatar}
+      className={css.avatar}
     />
-    <p class={css.name}>{username}</p>
-    <p class={css.tag}>@{tag}</p>
-    <p class={css.location}>{location}</p>
+    <p className={css.name}>{username}</p>
+    <p className={css.tag}>@{tag}</p>
+    <p className={css.location}>{location}</p>
   </div>
 
-  <ul class={css.stats}>
-    <li class={css.item}>
-      <span class={css.label}>Followers</span>
-      <span class={css.quantity}>{stats.followers}</span>
+  <ul className={css.stats}>
+    <li className={css.item}>
+      <span className={css.label}>Followers</span>
+      <span className={css.quantity}>{stats.followers}</span>
     </li>
-    <li class={css.item}>
-      <span class={css.label}>Views</span>
-      <span class={css.quantity}>{stats.views}</span>
+    <li className={css.item}>
+      <span className={css.label}>Views</span>
+      <span className={css.quantity}>{stats.views}</span>
     </li>
-    <li class={css.item}>
-      <span class={css.label}>Likes</span>
-      <span class={css.quantity}>{stats.likes}</span>
+    <li className={css.item}>
+      <span className={css.label}>Likes</span>
+      <span className={css.quantity}>{stats.likes}</span>
     </li>
   </ul>
 </div>)
@@ -41,7 +41,12 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.number.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    }
+  ).isRequired
 }
 
 export default Profile;

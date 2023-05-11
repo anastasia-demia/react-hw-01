@@ -4,7 +4,7 @@ import css from "./friend.module.css"
 
 export default function Friends ({ friends }) {
   return (
-    <ul class={css.list}>
+    <ul className={css.list}>
       {friends.map(({ id, isOnline, avatar, name }) => (
         <Friend
           key={id}
@@ -18,8 +18,9 @@ export default function Friends ({ friends }) {
 }
 
 Friends.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
 }

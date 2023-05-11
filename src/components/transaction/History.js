@@ -6,7 +6,7 @@ const TransactionHistory = ({
   items
 }) => {
   return (
-    <table class={css.history}>
+    <table className={css.history}>
       <thead>
         <tr>
           <th>Type</th>
@@ -30,10 +30,11 @@ const TransactionHistory = ({
 }
 
 TransactionHistory.propTypes = {
-  id: PropTypes.number.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 }
 
 
