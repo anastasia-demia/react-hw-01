@@ -10,7 +10,7 @@ const Stats = ({
 }) => {
   return (
     <div class={css.box}>
-      <section className={css.statistics}>
+    {title && <section className={css.statistics}>
       <h2 class={css.title}>{title}</h2>
 
       <ul className={css.list}>
@@ -27,7 +27,7 @@ const Stats = ({
           );
         })}
       </ul>
-    </section>
+    </section>}
     </div>
   )}
 
