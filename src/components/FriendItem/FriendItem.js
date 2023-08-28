@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import css from "./friend.module.css";
+import css from "./FriendItem.module.css";
 
-const Friend = ({
+const FriendItem = ({
     avatar, name, isOnline
   }) => {
     return (
@@ -16,10 +16,10 @@ const Friend = ({
   )
 };
 
-Friend.propTypes = {
+FriendItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
 };
 
-export default Friend;
+export default FriendItem;

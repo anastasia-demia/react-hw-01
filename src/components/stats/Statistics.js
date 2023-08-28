@@ -10,8 +10,8 @@ const Stats = ({
 }) => {
   return (
     <div className={css.box}>
-    {title && <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+    <section className={css.statistics}>
+    {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.list}>
         {stats.map(({ id, label, percentage }) => {
@@ -27,7 +27,7 @@ const Stats = ({
           );
         })}
       </ul>
-    </section>}
+    </section>
     </div>
   )
 };
