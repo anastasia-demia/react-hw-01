@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from "./stats.module.css";
 
-// hello
+// stats
 function randomHexColor() {
   return `#${Math.floor(Math.random() * 12345678).toString(16)}`;
 };
